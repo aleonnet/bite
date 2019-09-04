@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "544741599247",
+    "firebase_url": "https://bite-2da35.firebaseio.com",
+    "project_id": "bite-2da35",
+    "storage_bucket": "bite-2da35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544741599247:android:5faf68cf54c23e47a85b7a",
+        "android_client_info": {
+          "package_name": "com.markoelez.bite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544741599247-atojkd0d08jrqisgerf1dmiovj3m20sg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP-xkI4NtUyVncMJncTjt-dwrmlA9RXHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544741599247-atojkd0d08jrqisgerf1dmiovj3m20sg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "544741599247-ua9s5nokcegbabiobc413rupi9jgu6bp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.markoelez.bite"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
