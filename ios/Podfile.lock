@@ -97,6 +97,9 @@ PODS:
     - GoogleUtilities/UserDefaults (~> 6.2)
     - Protobuf (~> 3.1)
   - Flutter (1.0.0)
+  - google_maps_flutter (0.0.1):
+    - Flutter
+    - GoogleMaps
   - google_sign_in (0.0.1):
     - Flutter
     - GoogleSignIn (~> 4.0)
@@ -110,6 +113,11 @@ PODS:
   - GoogleDataTransportCCTSupport (1.0.2):
     - GoogleDataTransport (~> 1.1)
     - nanopb
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
   - GoogleSignIn (4.4.0):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -172,6 +180,7 @@ DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
+  - google_maps_flutter (from `.symlinks/plugins/google_maps_flutter/ios`)
   - google_sign_in (from `.symlinks/plugins/google_sign_in/ios`)
 
 SPEC REPOS:
@@ -191,6 +200,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
+    - GoogleMaps
     - GoogleSignIn
     - GoogleToolboxForMac
     - GoogleUtilities
@@ -214,6 +224,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_messaging/ios"
   Flutter:
     :path: ".symlinks/flutter/ios"
+  google_maps_flutter:
+    :path: ".symlinks/plugins/google_maps_flutter/ios"
   google_sign_in:
     :path: ".symlinks/plugins/google_sign_in/ios"
 
@@ -236,10 +248,12 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 8b42755db950682e7de0d167bc6fb26a57b244af
   FirebaseMessaging: 930e4cce01f8f1e634cfdd1881db471fb61be883
   Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
+  google_maps_flutter: 78a52114c898b42ea647919679a4c58b70abe876
   google_sign_in: 27e70a98b529f0b076d4b19f231b81da28b1750b
   GoogleAppMeasurement: 86a82f0e1f20b8eedf8e20326530138fd71409de
   GoogleDataTransport: 91e682bd60a49d3f8f69f2e909a66efaed5a1e7a
   GoogleDataTransportCCTSupport: 6b545f7149111180763dc18c6f372c963de4a310
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
   GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
   GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
