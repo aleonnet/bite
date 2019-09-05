@@ -9,6 +9,10 @@
 .history
 .svn/
 
+android/app/src/main/res/values/secret.xml
+ios/Runner/constants.h
+ios/Runner/constants.m
+
 # IntelliJ related
 *.iml
 *.ipr
