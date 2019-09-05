@@ -34,6 +34,8 @@ dependencies:
   firebase_analytics: ^5.0.1
   # bloc
   flutter_bloc: ^0.21.0
+  bloc: ^0.15.0
+  equatable: ^0.5.1
 
 dev_dependencies:
   flutter_test:
