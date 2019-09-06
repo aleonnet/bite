@@ -1,3 +1,4 @@
+import 'package:bite/components/appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -6,9 +7,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-      ),
+      appBar: SharedAppBar(),
       body: Container(
         child: GoogleMap(
           initialCameraPosition: CameraPosition(

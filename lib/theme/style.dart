@@ -5,6 +5,6 @@ ThemeData appTheme() {
     primaryColor: Colors.white,
     primaryColorDark: Colors.white,
     accentColor: Colors.green,
-    buttonColor: Colors.greenAccent,
+    buttonColor: Colors.red[400],
   );
 }

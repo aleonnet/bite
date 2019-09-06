@@ -36,6 +36,7 @@ dependencies:
   flutter_bloc: ^0.21.0
   bloc: ^0.15.0
   equatable: ^0.5.1
+  observable: ^0.22.2
 
 dev_dependencies:
   flutter_test:
