@@ -3,6 +3,7 @@ import 'package:bite/blocs/login/bloc.dart';
 import 'package:bite/models/user_repo.dart';
 import 'package:bite/screens/login/components/create_account_button.dart';
 import 'package:bite/screens/login/components/login_button.dart';
+import 'package:bite/screens/login/login_detail.dart';
 import 'package:bite/theme/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -83,54 +84,40 @@ class _LoginFormState extends State<LoginForm> {
         builder: (BuildContext context, LoginState state) {
           return Container(
             child: Padding(
-              padding: EdgeInsets.all(40.0),
+              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 40.0),
               child: Form(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    TextFormField(
-                      controller: _emailController,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Email',
-                      ),
-                      autovalidate: true,
-                      autocorrect: false,
-                      validator: (_) {
-                        return !state.isEmailValid ? 'Invalid Email' : null;
-                      },
+                    Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Get started with bite',
+                          style: TextStyle(fontSize: 18),
+                          textAlign: TextAlign.start,
+                        )),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 10),
                     ),
-                    Padding(padding: EdgeInsets.symmetric(vertical: 5)),
-                    TextFormField(
-                      controller: _passwordController,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Password',
+                    InkWell(
+                      splashColor: Colors.blue,
+                      child: TextFormField(
+                        enabled: false,
+                        controller: _emailController,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Phone',
+                        ),
+                        autovalidate: true,
+                        autocorrect: false,
+                        validator: (_) {
+                          return !state.isEmailValid ? 'Invalid Number' : null;
+                        },
                       ),
-                      obscureText: true,
-                      autovalidate: true,
-                      autocorrect: false,
-                      validator: (_) {
-                        return !state.isPasswordValid
-                            ? 'Invalid Password'
-                            : null;
-                      },
                     ),
                     Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 30, horizontal: 40),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          LoginButton(
-                            onPressed: isLoginButtonEnabled(state)
-                                ? _onFormSubmitted
-                                : null,
-                          ),
-                          CreateAccountButton(userRepository: _userRepository),
-                        ],
-                      ),
-                    ),
+                      padding: EdgeInsets.symmetric(vertical: 30),
+                    )
                   ],
                 ),
               ),
