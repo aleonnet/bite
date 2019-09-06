@@ -39,17 +39,13 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Container(
           child: Column(
             children: <Widget>[
-              Container(
-                child: Expanded(
-                  child: Image.asset(
-                    'assets/images/food2.jpg',
-                    fit: BoxFit.fitHeight,
-                  ),
+              Expanded(
+                child: Image.asset(
+                  'assets/images/food2.jpg',
+                  fit: BoxFit.fitHeight,
                 ),
               ),
-              Container(
-                child: LoginForm(userRepository: _userRepository),
-              )
+              LoginForm(userRepository: _userRepository),
             ],
           ),
         ),
