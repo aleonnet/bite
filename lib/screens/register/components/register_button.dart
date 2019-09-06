@@ -12,7 +12,7 @@ class RegisterButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       height: 50,
-      disabledColor: Colors.red[400],
+      disabledColor: appTheme().disabledColor,
       color: appTheme().buttonColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
@@ -20,7 +20,7 @@ class RegisterButton extends StatelessWidget {
       onPressed: _onPressed,
       child: Text(
         'Register',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: appTheme().textSelectionColor),
       ),
     );
   }

@@ -84,17 +84,17 @@ class _LoginFormState extends State<LoginForm> {
           return Container(
             color: appTheme().primaryColor,
             child: Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(40.0),
               child: Form(
                 child: ListView(
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 60),
+                      padding: EdgeInsets.symmetric(vertical: 80),
                     ),
                     TextFormField(
                       controller: _emailController,
                       decoration: InputDecoration(
-                        icon: Icon(Icons.email),
+                        border: OutlineInputBorder(),
                         labelText: 'Email',
                       ),
                       autovalidate: true,
@@ -103,10 +103,11 @@ class _LoginFormState extends State<LoginForm> {
                         return !state.isEmailValid ? 'Invalid Email' : null;
                       },
                     ),
+                    Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                     TextFormField(
                       controller: _passwordController,
                       decoration: InputDecoration(
-                        icon: Icon(Icons.lock),
+                        border: OutlineInputBorder(),
                         labelText: 'Password',
                       ),
                       obscureText: true,
@@ -120,7 +121,7 @@ class _LoginFormState extends State<LoginForm> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsets.symmetric(vertical: 50, horizontal: 60),
+                          EdgeInsets.symmetric(vertical: 60, horizontal: 90),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: <Widget>[
@@ -129,6 +130,7 @@ class _LoginFormState extends State<LoginForm> {
                                 ? _onFormSubmitted
                                 : null,
                           ),
+                          Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                           CreateAccountButton(userRepository: _userRepository),
                         ],
                       ),

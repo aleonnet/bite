@@ -2,6 +2,7 @@ import 'package:bite/blocs/login/bloc.dart';
 import 'package:bite/components/appbar.dart';
 import 'package:bite/models/user_repo.dart';
 import 'package:bite/screens/login/components/login_form.dart';
+import 'package:bite/theme/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,7 +36,18 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: SharedAppBar(),
       body: BlocProvider<LoginBloc>(
         builder: (BuildContext context) => _loginBloc,
-        child: LoginForm(userRepository: _userRepository),
+        child: Container(
+          color: appTheme().primaryColor,
+          child: Stack(
+            children: <Widget>[
+              LoginForm(userRepository: _userRepository),
+              Image.asset(
+                'assets/uber.jpg',
+                height: 100,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

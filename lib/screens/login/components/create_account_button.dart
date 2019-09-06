@@ -1,5 +1,6 @@
 import 'package:bite/models/user_repo.dart';
 import 'package:bite/screens/register/register_screen.dart';
+import 'package:bite/theme/style.dart';
 import 'package:flutter/material.dart';
 
 class CreateAccountButton extends StatelessWidget {
@@ -13,8 +14,11 @@ class CreateAccountButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
+      height: 60,
+      color: appTheme().buttonColor,
       child: Text(
         'Register',
+        style: TextStyle(color: appTheme().textSelectionColor),
       ),
       onPressed: () {
         Navigator.of(context).push(

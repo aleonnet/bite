@@ -11,14 +11,12 @@ class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      height: 50,
+      height: 60,
       color: appTheme().buttonColor,
-      disabledColor: Colors.red[100],
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
-      ),
+      disabledColor: appTheme().disabledColor,
       onPressed: _onPressed,
-      child: Text('Login', style: TextStyle(color: Colors.white)),
+      child:
+          Text('Login', style: TextStyle(color: appTheme().textSelectionColor)),
     );
   }
 }

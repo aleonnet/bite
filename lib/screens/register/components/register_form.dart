@@ -1,6 +1,7 @@
 import 'package:bite/blocs/auth/bloc.dart';
 import 'package:bite/blocs/register/bloc.dart';
 import 'package:bite/screens/register/components/register_button.dart';
+import 'package:bite/theme/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -66,7 +67,7 @@ class _RegisterFormState extends State<RegisterForm> {
                     Icon(Icons.error),
                   ],
                 ),
-                backgroundColor: Colors.red,
+                backgroundColor: appTheme().accentColor,
               ),
             );
         }
