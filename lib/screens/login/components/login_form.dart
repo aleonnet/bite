@@ -82,15 +82,12 @@ class _LoginFormState extends State<LoginForm> {
         bloc: _loginBloc,
         builder: (BuildContext context, LoginState state) {
           return Container(
-            color: appTheme().primaryColor,
             child: Padding(
               padding: EdgeInsets.all(40.0),
               child: Form(
-                child: ListView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 80),
-                    ),
                     TextFormField(
                       controller: _emailController,
                       decoration: InputDecoration(
@@ -103,7 +100,7 @@ class _LoginFormState extends State<LoginForm> {
                         return !state.isEmailValid ? 'Invalid Email' : null;
                       },
                     ),
-                    Padding(padding: EdgeInsets.symmetric(vertical: 10)),
+                    Padding(padding: EdgeInsets.symmetric(vertical: 5)),
                     TextFormField(
                       controller: _passwordController,
                       decoration: InputDecoration(
@@ -121,16 +118,15 @@ class _LoginFormState extends State<LoginForm> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsets.symmetric(vertical: 60, horizontal: 90),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                          EdgeInsets.symmetric(vertical: 30, horizontal: 40),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           LoginButton(
                             onPressed: isLoginButtonEnabled(state)
                                 ? _onFormSubmitted
                                 : null,
                           ),
-                          Padding(padding: EdgeInsets.symmetric(vertical: 10)),
                           CreateAccountButton(userRepository: _userRepository),
                         ],
                       ),

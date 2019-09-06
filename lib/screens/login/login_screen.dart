@@ -30,21 +30,26 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+// LoginForm(userRepository: _userRepository)
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: SharedAppBar(),
       body: BlocProvider<LoginBloc>(
         builder: (BuildContext context) => _loginBloc,
         child: Container(
-          color: appTheme().primaryColor,
-          child: Stack(
+          child: Column(
             children: <Widget>[
-              LoginForm(userRepository: _userRepository),
-              Image.asset(
-                'assets/uber.jpg',
-                height: 100,
+              Container(
+                child: Expanded(
+                  child: Image.asset(
+                    'assets/images/food2.jpg',
+                    fit: BoxFit.fitHeight,
+                  ),
+                ),
               ),
+              Container(
+                child: LoginForm(userRepository: _userRepository),
+              )
             ],
           ),
         ),
