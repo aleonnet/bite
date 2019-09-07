@@ -82,6 +82,7 @@ class _LoginFormState extends State<LoginForm> {
         bloc: _loginBloc,
         builder: (BuildContext context, LoginState state) {
           return Container(
+            color: appTheme().primaryColorDark,
             child: Padding(
               padding: EdgeInsets.all(40.0),
               child: Form(
@@ -91,9 +92,11 @@ class _LoginFormState extends State<LoginForm> {
                     TextFormField(
                       controller: _emailController,
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Email',
-                      ),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.white, width: 2)),
+                          labelText: 'Email',
+                          labelStyle: TextStyle(color: Colors.white)),
                       autovalidate: true,
                       autocorrect: false,
                       validator: (_) {
@@ -104,9 +107,11 @@ class _LoginFormState extends State<LoginForm> {
                     TextFormField(
                       controller: _passwordController,
                       decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Password',
-                      ),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.white, width: 2)),
+                          labelText: 'Password',
+                          labelStyle: TextStyle(color: Colors.white)),
                       obscureText: true,
                       autovalidate: true,
                       autocorrect: false,

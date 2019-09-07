@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 ThemeData appTheme() {
   return ThemeData(
-      primaryColor: Colors.white,
-      primaryColorDark: Colors.white,
+      primaryColor: Colors.redAccent,
+      primaryColorDark: Colors.redAccent,
       accentColor: Colors.redAccent,
-      buttonColor: Colors.red[400],
+      buttonColor: Colors.redAccent,
       disabledColor: Colors.grey[400],
       splashColor: Colors.black,
       textSelectionColor: Colors.white);
