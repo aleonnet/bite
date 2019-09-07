@@ -38,6 +38,7 @@ class _AppState extends State<App> {
           return _authBloc;
         },
         child: MaterialApp(
+          theme: appTheme(),
           home: BlocBuilder(
             bloc: _authBloc,
             builder: (BuildContext context, AuthState state) {

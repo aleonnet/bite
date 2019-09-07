@@ -83,8 +83,9 @@ class _LoginFormState extends State<LoginForm> {
         bloc: _loginBloc,
         builder: (BuildContext context, LoginState state) {
           return Container(
+            color: appTheme().primaryColorDark,
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 40.0),
+              padding: EdgeInsets.symmetric(vertical: 50, horizontal: 40.0),
               child: Form(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -93,30 +94,41 @@ class _LoginFormState extends State<LoginForm> {
                         alignment: Alignment.centerLeft,
                         child: Text(
                           'Get started with bite',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: appTheme().textSelectionColor),
                           textAlign: TextAlign.start,
                         )),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 10),
                     ),
-                    InkWell(
-                      splashColor: Colors.blue,
-                      child: TextFormField(
-                        enabled: false,
-                        controller: _emailController,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Phone',
-                        ),
-                        autovalidate: true,
-                        autocorrect: false,
-                        validator: (_) {
-                          return !state.isEmailValid ? 'Invalid Number' : null;
+                    SizedBox(
+                      width: double.infinity,
+                      height: 60,
+                      child: OutlineButton(
+                        focusColor: Colors.white,
+                        splashColor: Colors.white70,
+                        highlightedBorderColor: Colors.white,
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) {
+                              return LoginDetail();
+                            }),
+                          );
                         },
+                        color: Colors.white,
+                        borderSide: BorderSide(color: Colors.white, width: 2),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Phone',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                        ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 30),
+                      padding: EdgeInsets.symmetric(vertical: 40),
                     )
                   ],
                 ),
