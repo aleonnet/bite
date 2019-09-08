@@ -92,9 +92,7 @@ class _LoginFormState extends State<LoginForm> {
                     TextFormField(
                       controller: _emailController,
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.white, width: 2)),
+                          border: OutlineInputBorder(),
                           labelText: 'Email',
                           labelStyle: TextStyle(color: Colors.white)),
                       autovalidate: true,
@@ -107,9 +105,7 @@ class _LoginFormState extends State<LoginForm> {
                     TextFormField(
                       controller: _passwordController,
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderSide:
-                                  BorderSide(color: Colors.white, width: 2)),
+                          border: OutlineInputBorder(),
                           labelText: 'Password',
                           labelStyle: TextStyle(color: Colors.white)),
                       obscureText: true,
