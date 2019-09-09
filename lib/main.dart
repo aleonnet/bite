@@ -3,6 +3,7 @@ import 'package:bite/blocs/auth/bloc.dart';
 import 'package:bite/models/user_repo.dart';
 import 'package:bite/screens/home/home.dart';
 import 'package:bite/screens/login/login_screen.dart';
+import 'package:bite/screens/onboarding/onboarding_screen.dart';
 import 'package:bite/screens/splash_screen.dart';
 import 'package:bite/theme/style.dart';
 import 'package:bloc/bloc.dart';
@@ -46,7 +47,8 @@ class _AppState extends State<App> {
                 return SplashScreen();
               }
               if (state is Unauthenticated) {
-                return LoginScreen(userRepository: _userRepository);
+                //return LoginScreen(userRepository: _userRepository);
+                return OnboardingScreen();
               }
               if (state is Authenticated) {
                 return Home();

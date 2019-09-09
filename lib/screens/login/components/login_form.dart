@@ -95,11 +95,7 @@ class _LoginFormState extends State<LoginForm> {
                           border: OutlineInputBorder(),
                           labelText: 'Email',
                           labelStyle: TextStyle(color: Colors.white)),
-                      autovalidate: true,
                       autocorrect: false,
-                      validator: (_) {
-                        return !state.isEmailValid ? 'Invalid Email' : null;
-                      },
                     ),
                     Padding(padding: EdgeInsets.symmetric(vertical: 5)),
                     TextFormField(
@@ -109,13 +105,7 @@ class _LoginFormState extends State<LoginForm> {
                           labelText: 'Password',
                           labelStyle: TextStyle(color: Colors.white)),
                       obscureText: true,
-                      autovalidate: true,
                       autocorrect: false,
-                      validator: (_) {
-                        return !state.isPasswordValid
-                            ? 'Invalid Password'
-                            : null;
-                      },
                     ),
                     Padding(
                       padding:
