@@ -47,8 +47,8 @@ class _AppState extends State<App> {
                 return SplashScreen();
               }
               if (state is Unauthenticated) {
-                //return LoginScreen(userRepository: _userRepository);
-                return OnboardingScreen();
+                // return LoginScreen(userRepository: _userRepository);
+                return OnboardingScreen(userRepository: _userRepository);
               }
               if (state is Authenticated) {
                 return Home();

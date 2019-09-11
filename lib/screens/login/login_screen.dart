@@ -33,20 +33,25 @@ class _LoginScreenState extends State<LoginScreen> {
 // LoginForm(userRepository: _userRepository)
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocProvider<LoginBloc>(
-        builder: (BuildContext context) => _loginBloc,
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              Expanded(
-                child: Image.asset(
-                  'assets/images/food2.jpg',
-                  fit: BoxFit.fitHeight,
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        body: BlocProvider<LoginBloc>(
+          builder: (BuildContext context) => _loginBloc,
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: Image.asset(
+                    'assets/images/food4.png',
+                    fit: BoxFit.fitHeight,
+                  ),
                 ),
-              ),
-              LoginForm(userRepository: _userRepository),
-            ],
+                LoginForm(userRepository: _userRepository),
+              ],
+            ),
           ),
         ),
       ),

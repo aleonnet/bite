@@ -5,7 +5,7 @@ ThemeData appTheme() {
       primaryColor: Colors.white,
       primaryTextTheme: Typography.whiteCupertino,
       textTheme: Typography.whiteCupertino,
-      primaryColorDark: Colors.white,
+      primaryColorDark: Colors.redAccent,
       accentColor: Colors.redAccent,
       buttonColor: Colors.redAccent,
       disabledColor: Colors.grey[400],
